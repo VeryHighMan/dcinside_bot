@@ -1,14 +1,9 @@
 import sys
-import urllib.request as req
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import pyqtSlot, Qt
-from PyQt5.QtGui import *
 from bs4 import BeautifulSoup
 import requests
-from datetime import datetime
 from selenium import webdriver
 
-#gallery_id = 'baseball_new7'
 PhantomJS_Path = './phantomjs/bin\phantomjs'
 
 
@@ -16,8 +11,8 @@ class MyWindow(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("반자동 댓글봇 프로토타입")
-        self.setGeometry(300, 50, 1100, 500)
+        self.setWindowTitle("댓글 작성기 v0.2")
+        self.setGeometry(300, 50, 1100, 700)
 
         self.url = 'http://gall.dcinside.com/board/lists'
         self.url_m = 'http://gall.dcinside.com/mgallery/board/lists'
@@ -27,46 +22,70 @@ class MyWindow(QWidget):
         self.gallery_id = 'baseball_new7'
 
         self.btn_refresh = QPushButton("새로고침", self)
-        self.btn_refresh.move(800, 0)
+        self.btn_refresh.setGeometry(800, 0, 300, 30)
         self.btn_refresh.clicked.connect(self.btn_refresh_clicked)
 
         btn_setId = QPushButton("갤러리 설정", self)
         btn_setId.move(900, 50)
         btn_setId.clicked.connect(self.btn_setId_clicked)
 
-        btn_setId_yagall = QPushButton("야갤", self) # baseball_new7
+        btn_setId_yagall = QPushButton("국내야구 갤러리", self) # baseball_new7
         btn_setId_yagall.move(800, 100)
         btn_setId_yagall.clicked.connect(self.setId_yegall)
 
-        btn_setId_comic = QPushButton("만갤", self) # comic_new1
-        btn_setId_comic.move(900, 100)
+        btn_setId_aoegame = QPushButton("중세게임 갤러리", self) # aoegame
+        btn_setId_aoegame.move(900, 100)
+        btn_setId_aoegame.clicked.connect(self.setId_aoegame)
+
+        btn_setId_comic = QPushButton("만화 갤러리", self) # comic_new1
+        btn_setId_comic.move(1000, 100)
         btn_setId_comic.clicked.connect(self.setId_comic)
 
-        btn_setId_aoegame = QPushButton("중갤", self) # aoegame
-        btn_setId_aoegame.move(1000, 100)
-        btn_setId_aoegame.clicked.connect(self.setId_aoegame)
+        btn_setId_football = QPushButton("해외축구 갤러리", self)  # football_new6
+        btn_setId_football.move(800, 130)
+        btn_setId_football.clicked.connect(self.setId_football)
+
+        btn_setId_cat = QPushButton("야옹이 갤러리", self)  # cat
+        btn_setId_cat.move(900, 130)
+        btn_setId_cat.clicked.connect(self.setId_cat)
+
+        btn_setId_dog = QPushButton("멍멍이 갤러리", self)  # dog
+        btn_setId_dog.move(1000, 130)
+        btn_setId_dog.clicked.connect(self.setId_dog)
+
+        btn_setId_etcpro = QPushButton("기타프로그램 갤러리", self)  # etc_program2
+        btn_setId_etcpro.move(800, 160)
+        btn_setId_etcpro.clicked.connect(self.setId_etcpro)
+
+        btn_setId_game = QPushButton("게임 갤러리", self)  # game1
+        btn_setId_game.move(920, 160)
+        btn_setId_game.clicked.connect(self.setId_game)
+
+        btn_setId_fantasy = QPushButton("판타지 갤러리", self)  # fantasy_new
+        btn_setId_fantasy.move(1000, 160)
+        btn_setId_fantasy.clicked.connect(self.setId_fantasy)
 
         self.tedit_galleryId = QTextEdit(self.gallery_id, self)
         self.tedit_galleryId.setGeometry(800, 50, 100, 30)
         self.tedit_galleryId.setEnabled(True)
 
         self.label_comment = QLabel('닉네임 입력', self)
-        self.label_comment.setGeometry(800, 150, 100, 30)
+        self.label_comment.setGeometry(800, 250, 100, 30)
 
         self.tedit_nick = QTextEdit('', self)
-        self.tedit_nick.setGeometry(800, 180, 100, 30)
+        self.tedit_nick.setGeometry(800, 280, 100, 30)
 
         self.label_pw = QLabel('비밀번호 입력', self)
-        self.label_pw.setGeometry(950, 150, 100, 30)
+        self.label_pw.setGeometry(950, 250, 100, 30)
 
         self.tedit_pw = QTextEdit('', self)
-        self.tedit_pw.setGeometry(950, 180, 100, 30)
+        self.tedit_pw.setGeometry(950, 280, 100, 30)
 
         self.label_comment = QLabel('댓글 입력', self)
-        self.label_comment.setGeometry(800, 210, 100, 30)
+        self.label_comment.setGeometry(800, 310, 100, 30)
 
         self.tedit_comment = QTextEdit('', self)
-        self.tedit_comment.setGeometry(800, 240, 250, 50)
+        self.tedit_comment.setGeometry(800, 340, 250, 50)
 
         self.tableWidget = QTableWidget(self)
         self.initUI()
@@ -124,11 +143,9 @@ class MyWindow(QWidget):
             subject_date_list.append(m.string)
 
         #self.setGeometry(800, 200, 400, 300)
-        self.tableWidget.resize(800, 1000)
+        self.tableWidget.resize(800, 700)
         self.tableWidget.setRowCount(len(subject_no_list))
         self.tableWidget.setColumnCount(5)
-
-        #self.tableWidget.setColumnWidth(0, 80) # 컬럼 너비 지정
 
         for index, item in enumerate(subject_no_list) :
             self.tableWidget.setItem(index, 0, QTableWidgetItem(subject_no_list[index]))
@@ -141,6 +158,8 @@ class MyWindow(QWidget):
                 self.btn_cell = QPushButton('댓글 작성')
                 self.btn_cell.clicked.connect(self.btn_cell_clicked)
                 self.tableWidget.setCellWidget(index, 4, self.btn_cell)
+            else :
+                self.tableWidget.setCellWidget(index, 4, None)
 
         self.tableWidget.resizeColumnsToContents() # 전체 컬럼 너비 자동 지정
         self.tableWidget.setColumnWidth(1, 400) # 글 제목 너비 조절
@@ -191,10 +210,9 @@ class MyWindow(QWidget):
                 self.btn_cell = QPushButton('댓글 작성')
                 self.btn_cell.clicked.connect(self.btn_cell_clicked)
                 self.tableWidget.setCellWidget(index, 4, self.btn_cell)
+            else :
+                self.tableWidget.setCellWidget(index, 4, None)
 
-        #self.tableWidget.setCellWidget(3, 4, QPushButton('댓글 작성'))
-
-        #self.tableWidget.resizeColumnsToContents() # 전체 컬럼 너비 자동 지정
         self.tableWidget.horizontalHeader().setStretchLastSection(True) # 마지막 컬럼을 table width 에 맞춤
 
     def setId(self) :
@@ -215,6 +233,36 @@ class MyWindow(QWidget):
         self.tedit_galleryId.setText('aoegame')
         self.gallery_id = 'aoegame'
         self.refresh(self.url_m)
+
+    def setId_football(self) :
+        self.tedit_galleryId.setText('football_new6')
+        self.gallery_id = 'football_new6'
+        self.refresh(self.url)
+
+    def setId_cat(self) :
+        self.tedit_galleryId.setText('cat')
+        self.gallery_id = 'cat'
+        self.refresh(self.url)
+
+    def setId_dog(self) :
+        self.tedit_galleryId.setText('dog')
+        self.gallery_id = 'dog'
+        self.refresh(self.url)
+
+    def setId_etcpro(self) :
+        self.tedit_galleryId.setText('etc_program2')
+        self.gallery_id = 'etc_program2'
+        self.refresh(self.url)
+
+    def setId_game(self) :
+        self.tedit_galleryId.setText('game1')
+        self.gallery_id = 'game1'
+        self.refresh(self.url)
+
+    def setId_fantasy(self) :
+        self.tedit_galleryId.setText('fantasy_new')
+        self.gallery_id = 'fantasy_new'
+        self.refresh(self.url)
 
 def getData(url, gallery_id):
 
