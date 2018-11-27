@@ -1,7 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63189093-48e0-4b84-8e82-0aec814ccedd" name="Default" comment="" />
+    <list default="true" id="63189093-48e0-4b84-8e82-0aec814ccedd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/ChangeLog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/LICENSE.BSD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/arguments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/child_process-examples.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/colorwheel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/countdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/detectsniff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/echoToFile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/features.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/fibo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/injectme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/loadspeed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/loadurlwithoutcss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/modernizr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/netlog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/netsniff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/openurlwithproxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/outputEncoding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/page_events.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/pagecallback.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/phantomwebintro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/postjson.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/postserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/printenv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/printheaderfooter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/printmargins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/rasterize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/render_multi_url.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/responsive-screenshot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/run-jasmine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/run-jasmine2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/run-qunit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/scandir.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/serverkeepalive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/simpleserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/sleepsort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/stdin-stdout-stderr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/universe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/unrandomize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/useragent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/version.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/waitfor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/examples/walk_through_frames.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/third-party.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prototype.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,20 +63,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="prototype.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/prototype.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="comment.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/comment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+            <state relative-caret-position="589">
+              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="388" />
@@ -36,6 +92,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -47,7 +104,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -102,25 +158,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32943678" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32943678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -129,10 +184,30 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/prototype.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+        <state relative-caret-position="494">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
